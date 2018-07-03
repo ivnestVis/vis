@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+
+        #baidu_map {
+            height: 100%
+        }
+    </style>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/map.css">
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=s5op0rBri8h6EBYCYoEREAZ3OQRrMKME"></script>
+    <script src="lib/echarts.js"></script>
+    <script src="lib/bmap.js"></script>
+
+
+</head>
+<body>
+
+<div class="page-header">
+    <h4>数据地图
+        <small>beiyou.charts</small>
+    </h4>
+</div>
+<div class="container">
+    <div id="index_one" class="dropdown col-md-3">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">
+            一级指标
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li class="dropdown-header"><a href="#">请选择一级指标</a></li>
+            <li><a href="#">指标1</a></li>
+            <li><a href="#">指标2</a></li>
+            <li><a href="#">指标3</a></li>
+        </ul>
+    </div>
+    <div id="index_two" class="dropdown col-md-3">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">
+            二级指标
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li class="dropdown-header"><a href="#">请选择二级指标</a></li>
+            <li><a href="#">指标1</a></li>
+            <li><a href="#">指标2</a></li>
+            <li><a href="#">指标3</a></li>
+        </ul>
+    </div>
+    <div id="button_right" class="btn-group " role="group" aria-label="...">
+        <button type="button" class="btn btn-default" onclick="show_table()">按钮1</button>
+        <button type="button" class="btn btn-default" onclick="addEffectScatter(data,geoCoordMap)">按钮2</button>
+        <button type="button" class="btn btn-default">按钮3</button>
+    </div>
+    <div class="table_container" id="main_echarts"></div>
+
+
+</div>
+<div class="timeline_container">
+    <section class="cd-horizontal-timeline" style="">
+        <div class="timeline">
+            <div class="events-wrapper">
+                <div class="events">
+                    <ol>
+                        <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+                        <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+                        <!-- other dates here -->
+                    </ol>
+                    <span class="filling-line" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="baidu_map"></div>
+
+<script src="lib/jquery3.3.1/jquery3.3.1.js"></script>
+<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="static/js/main.js"></script>
+<script type="text/javascript" src="static/js/map.js"></script>
+<script src="lib/horizontal-timeline-master/js/main.js"></script>
+
+</body>
+</html>
